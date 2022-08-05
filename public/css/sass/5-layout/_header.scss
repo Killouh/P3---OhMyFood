@@ -1,0 +1,53 @@
+/* Header Main page */
+
+
+.header__logolink{
+    display: flex;
+    justify-content: center;
+}
+
+.headlocation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow:  0 -5px 5px -5px grey;
+    background-color: #e9e9e9;
+
+    .headlocation__mapmarker{
+        margin-right: 10px;
+    }
+}
+/* Fin Header Main Page */
+
+/* Header Alternate pages */
+
+.header__logoback{
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 130px;
+  
+}
+
+.backarrow{
+    height: 50px;
+    width: 50px;
+}
+
+.header__restaurant--picture{
+    margin-top: 20px;
+    height: 350px;
+    
+}
+
+.header__restpicture{
+    height: 350px;
+    width: 100%;
+    object-fit: cover; 
+    z-index: 1;
+}
+

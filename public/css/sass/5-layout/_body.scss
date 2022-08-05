@@ -1,0 +1,235 @@
+/* Body Main page */
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding-top: 50px;
+    padding-bottom: 60px;
+
+    .reservation__title {
+        @include boldtitle;
+        padding-bottom: 30px
+    }
+
+    .reservation__description {
+        @include descriptiontext;
+        padding-bottom: 30px
+    }
+
+    .reservation__button {
+        @include btn-primacolor;
+    }
+}
+
+.functionning {
+    display: flex;
+    flex-direction: column;
+
+    .functionning__title {
+        @include containerstitle;
+    }
+
+    .functionning__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .functionning__choose {
+        @include btn-functionning;
+
+
+    }
+
+    .functionning__menu {
+        @include btn-functionning;
+
+    }
+
+    .functionning__taste {
+        @include btn-functionning;
+
+    }
+
+    .functionning__number {
+        @include functionning-number;
+    }
+
+    .functionning__telico {
+        color: grey;
+        @include functionning-telico
+    }
+
+    .functionning__telico2 {
+        color: $primary-color;
+        @include functionning-telico
+    }
+}
+
+.restaurant {
+    background-color: #f6f6f6;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .restaurant__title {
+        @include containerstitle;
+    }
+
+    .restaurant__cards {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 80%;
+        position: relative;
+        
+
+        .restaurant__picture {
+
+            height: 250px;
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            object-fit: cover;
+        }
+
+        .restaurand__card {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0 15px 0;
+           
+
+            .restaurant__new {
+                display: flex;
+                background-color: $new-bgcolor;
+                color: $new-txtcolor;
+                width: 75px;
+                height: 40px;
+                padding-left: 15px;
+                margin: 0 0 0 0;
+                border-radius: 5px 5px 5px 5px;
+                font-weight: bold;
+                font-size: 15px;
+                position: absolute;
+                top: 30px;
+                left: 510px;
+                align-items: center;
+
+            }
+
+            .restaurant__blank {
+                background-color: white;
+                border-radius: 0 0 20px 20px;
+                display: flex;
+                flex-direction: column;
+                height: 100px;
+                flex-wrap: wrap;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.15) 0px 5px 10px;
+
+                .restaurant__name {
+                    padding-top: 20px;
+                    padding-left: 10px;
+                    height: 30%;
+                    margin: 0 0 0 0;
+                    font-size: 20px;
+                }
+
+                .restaurant__place {
+                    height: 40%;
+                    padding-left: 10px;
+                    margin: 0 0 0 0;
+                    font-size: 18px;
+                }
+
+                .restaurant__like {
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: 40px;
+                    padding: 20px 30px 0 0;
+                }
+            }
+
+        }
+
+
+    }
+
+}
+
+/* Fin Body main page */
+
+/* Body Alternantes pages */
+.menu {
+    width: 100%;
+    background-color: #f6f6f6;
+    margin-top: -100px;
+    border-radius: 30px 30px 0 0;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 80px;
+
+
+    .menu__name {
+        display: flex;
+        padding-left: 20px;
+        justify-content: space-between;
+
+
+        .menu__name--like {
+            display: flex;
+            align-items: center;
+            padding-right: 70px;
+            font-size: 30px;
+        }
+
+    }
+
+    .menu__entries,
+    .menu__dishes,
+    .menu__desserts {
+        @include menu__dish;
+
+        .menu__entries--title,
+        .menu__dishes--title,
+        .menu__desserts--title {
+            display: flex;
+
+            ::after {
+                @include underline-mint;
+            }
+        }
+
+        .menu__entries--container,
+        .menu__dishes--container,
+        .menu__desserts--container {
+            @include menu__dish--container
+        }
+
+        .menu__entries--text,
+        .menu__dishes--text,
+        .menu__desserts--text {
+            @include menu__dish--text
+        }
+
+        .menu__entries--price,
+        .menu__dishes--price,
+        .menu__desserts--price {
+            @include menu__dish--price
+        }
+    }
+
+    .menu__order {
+        display: flex;
+        justify-content: center;
+
+        .command__button {
+            @include btn-primacolor;
+
+        }
+    }
+
+}
+
+/* Fin Body Alternates pages */

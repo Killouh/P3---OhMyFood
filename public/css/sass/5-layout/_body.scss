@@ -1,11 +1,9 @@
 /* Body Main page */
+
+/* Partie Réservation */
 .reservation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f6f6f6;
-    padding-top: 50px;
-    padding-bottom: 60px;
+    @include reservation;
+
 
     .reservation__title {
         @include boldtitle;
@@ -19,8 +17,19 @@
 
     .reservation__button {
         @include btn-primacolor;
+
+        &:hover {
+            @include btn-primacolor_hover;
+        }
+
     }
+
+
 }
+
+/* Fin Partie Réservation */
+
+/* Partie Fonctionnement */
 
 .functionning {
     display: flex;
@@ -39,16 +48,30 @@
     .functionning__choose {
         @include btn-functionning;
 
+        &:hover {
+            @include btn-functionning_hover;
+            @include functionning-telico_hover;
+        }
 
     }
 
     .functionning__menu {
         @include btn-functionning;
 
+        &:hover {
+            @include btn-functionning_hover;
+            @include functionning-telico_hover;
+        }
+
     }
 
     .functionning__taste {
         @include btn-functionning;
+
+        &:hover {
+            @include btn-functionning_hover;
+            @include functionning-telico_hover;
+        }
 
     }
 
@@ -57,98 +80,79 @@
     }
 
     .functionning__telico {
-        color: grey;
         @include functionning-telico
     }
 
-    .functionning__telico2 {
-        color: $primary-color;
-        @include functionning-telico
-    }
 }
 
+/* Fin Partie Fonctionnement */
+
+/* Partie Restaurant */
+
 .restaurant {
-    background-color: #f6f6f6;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
+    @include restaurant;
 
     .restaurant__title {
         @include containerstitle;
     }
 
     .restaurant__cards {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        width: 80%;
-        position: relative;
-        
+        @include restaurantcards;
+
 
         .restaurant__picture {
-
-            height: 250px;
-            width: 100%;
-            border-radius: 20px 20px 0 0;
-            object-fit: cover;
+            @include restaurantpicture;
         }
 
         .restaurand__card {
-            display: flex;
-            flex-direction: column;
-            margin: 10px 0 15px 0;
-           
+            @include restaurantcard;
+
 
             .restaurant__new {
-                display: flex;
-                background-color: $new-bgcolor;
-                color: $new-txtcolor;
-                width: 75px;
-                height: 40px;
-                padding-left: 15px;
-                margin: 0 0 0 0;
-                border-radius: 5px 5px 5px 5px;
-                font-weight: bold;
-                font-size: 15px;
-                position: absolute;
-                top: 30px;
-                left: 510px;
-                align-items: center;
+                @include restaurantnew;
 
             }
 
             .restaurant__blank {
-                background-color: white;
-                border-radius: 0 0 20px 20px;
-                display: flex;
-                flex-direction: column;
-                height: 100px;
-                flex-wrap: wrap;
-                box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.15) 0px 5px 10px;
+                @include restaurantblank;
 
                 .restaurant__name {
-                    padding-top: 20px;
-                    padding-left: 10px;
-                    height: 30%;
-                    margin: 0 0 0 0;
-                    font-size: 20px;
+                    @include restaurantname;
                 }
 
                 .restaurant__place {
-                    height: 40%;
-                    padding-left: 10px;
-                    margin: 0 0 0 0;
-                    font-size: 18px;
+                    @include restaurantplace;
                 }
 
                 .restaurant__like {
-                    display: flex;
-                    justify-content: flex-end;
-                    font-size: 40px;
-                    padding: 20px 30px 0 0;
+                    @include restaurantlike;
+
+                    .fa-stack {
+                        @include stack;
+
+                        .fa-regular {
+                            @include restaurantlikeborder;
+
+                            &:hover {
+                                @include restaurantlikeborder_hover;
+
+                            }
+                        }
+
+                        .fa-solid {
+                            @include restaurantlikeanime;
+
+                            &:hover {
+                                @include restaurantlikeanime_hover;
+
+                            }
+                        }
+                    }
+
+
+
                 }
+
             }
 
         }
@@ -158,30 +162,44 @@
 
 }
 
+/* Fin Partie Restaurant */
+
 /* Fin Body main page */
 
 /* Body Alternantes pages */
+
 .menu {
-    width: 100%;
-    background-color: #f6f6f6;
-    margin-top: -100px;
-    border-radius: 30px 30px 0 0;
-    z-index: 2;
-    position: relative;
-    margin-bottom: 80px;
+    @include menu;
 
 
     .menu__name {
-        display: flex;
-        padding-left: 20px;
-        justify-content: space-between;
+        @include menuname;
 
 
         .menu__name--like {
-            display: flex;
-            align-items: center;
-            padding-right: 70px;
-            font-size: 30px;
+            @include menunamelike;
+
+            .fa-stack {
+                @include stack;
+
+                .fa-regular {
+                    @include restaurantlikeborder;
+
+                    &:hover {
+                        @include restaurantlikeborder_hover;
+
+                    }
+                }
+
+                .fa-solid {
+                    @include restaurantlikeanime;
+
+                    &:hover {
+                        @include restaurantlikeanime_hover;
+
+                    }
+                }
+            }
         }
 
     }
@@ -204,20 +222,68 @@
         .menu__entries--container,
         .menu__dishes--container,
         .menu__desserts--container {
-            @include menu__dish--container
+
+            @include menu__dish--container;
+
+            .menuinfo {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+
+                .menu__entries--text,
+                .menu__dishes--text,
+                .menu__desserts--text {
+                    @include menu__dish--text;
+                }
+
+                .menu__entries--price,
+                .menu__dishes--price,
+                .menu__desserts--price {
+                    @include menu__dish--price;
+                }
+            }
+
+            .menu__dish--animation {
+                @include menu__dish--animation;
+
+            }
+
         }
 
-        .menu__entries--text,
-        .menu__dishes--text,
-        .menu__desserts--text {
-            @include menu__dish--text
+        #check{
+            height: 25px;
+            width: 25px;
+            background-color: white;
+            border-radius: 40px 40px 40px 40px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            color: $new-bgcolor;
+            transform: rotate(360deg);
+            transition: 0.4s ease-in-out;
         }
 
-        .menu__entries--price,
-        .menu__dishes--price,
-        .menu__desserts--price {
-            @include menu__dish--price
+        .menu__entries--container:hover .menu__dish--animation {
+            @include menu__dish--opacity
         }
+        .menu__entries--container:hover #check {
+            transform: rotate(0deg);
+        }
+
+        .menu__dishes--container:hover .menu__dish--animation{
+            @include menu__dish--opacity
+        }
+        .menu__dishes--container:hover #check {
+            transform: rotate(0deg);
+        }
+        .menu__desserts--container:hover .menu__dish--animation{
+            @include menu__dish--opacity
+        }
+        .menu__desserts--container:hover #check {
+            transform: rotate(0deg);
+        }
+
     }
 
     .menu__order {
@@ -227,6 +293,9 @@
         .command__button {
             @include btn-primacolor;
 
+            &:hover {
+                @include btn-primacolor_hover;
+            }
         }
     }
 

@@ -1,6 +1,6 @@
 @mixin btn-primacolor{
     border-radius: 30px 30px 30px 30px;
-    background: linear-gradient(170deg, rgb(255, 121, 218) 0%, rgb(198, 86, 208) 60%, rgb(147, 86, 220) 100%);
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
     height: 60px;
     width: 35%;
     color: white;
@@ -8,7 +8,15 @@
     border: none;
     font-weight: 500;
     box-shadow: 0 0.4rem 1rem 0.2rem rgb(0 0 0 / 30%);
+    cursor: pointer;
     
+}
+
+@mixin btn-primacolor_hover{
+    box-shadow: none;
+    transition :0.25s ease-in-out;
+    opacity: 0.90;
+    box-shadow: 0 0.4rem 1rem 0.2rem rgb(0 0 0 / 50%);
 }
 
 @mixin btn-functionning {
@@ -23,4 +31,22 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.15) 0px 5px 10px;
     margin-top: 25px;  
     font-weight: bold;
+    cursor: pointer;
 }
+
+@mixin  btn-functionning_hover {
+    background-color: #ffdff6;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 25px, rgba(0, 0, 0, 0.25) 0px 5px 10px;
+    color: $primary-color;
+    
+}
+
+@mixin functionning-telico_hover {
+    color: $primary-color;   
+}
+
+
+
+
+
+ 

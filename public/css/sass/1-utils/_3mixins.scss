@@ -1,25 +1,36 @@
 /* Mixin Index.html */
-@mixin boldtitle{
+
+@mixin reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding-top: 50px;
+    padding-bottom: 60px;
+
+}
+
+@mixin boldtitle {
     font-weight: bolder;
     font-size: 20px;
 }
 
-@mixin  containerstitle {
+@mixin containerstitle {
     display: flex;
     flex-direction: row;
     width: 82%;
     align-items: center;
     justify-content: flex-start;
     justify-items: center;
-    
+
 }
 
-@mixin descriptiontext{
+@mixin descriptiontext {
     font-weight: 550;
     font-size: 18px;
 }
 
-@mixin functionning-number{
+@mixin functionning-number {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,19 +39,174 @@
     border-radius: 20px 20px 20px 20px;
     background-color: $primary-color;
     color: white;
-    position:relative;
+    position: relative;
     right: 2%;
     font-size: 15px;
 }
 
+@mixin restaurant {
+    background-color: #f6f6f6;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+@mixin restaurantcards {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 80%;
+    position: relative;
+
+}
+
+@mixin restaurantpicture {
+    height: 250px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+
+}
+
+@mixin restaurantcard {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 15px 0;
+    position: relative;
+
+}
+
+@mixin restaurantnew {
+    display: flex;
+    background-color: $new-bgcolor;
+    color: $new-txtcolor;
+    width: 75px;
+    height: 40px;
+    padding-left: 15px;
+    margin: 0 0 0 0;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    top: 30px;
+    left: 510px;
+    align-items: center;
+
+}
+
+@mixin restaurantblank {
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.15) 0px 5px 10px;
+
+}
+
+@mixin restaurantname {
+    padding-top: 20px;
+    padding-left: 10px;
+    height: 30%;
+    margin: 0 0 0 0;
+    font-size: 20px;
+
+}
+
+@mixin restaurantplace {
+    padding: 0 0 0 10px;
+    margin: 0 0 0 0;
+    font-size: 18px;
+    height: 40%;
+
+}
+
+@mixin restaurantlike {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 40px;
+    padding: 0px 20px 0 0;
+    position: relative;
+}
+
+@mixin stack {
+
+        height: 40px;
+    width: 40px;
+}
+
+
+
+@mixin restaurantlikeborder {
+    color: black;
+    height: 40px;
+    width: 40px;
+
+}
+
+@mixin restaurantlikeborder_hover {
+    color: $primary-color;
+}
+
+@mixin restaurantlikeanime {
+    color:transparent;
+    height: 40px;
+    width: 40px;
+
+    
+}
+
+@mixin restaurantlikeanime_hover {
+    color: $primary-color;
+    animation: fade 0.2s ease-in;
+    animation: wiggle 500ms 50% 50%;
+}
+
+
+
 @mixin functionning-telico {
     margin: 0 20px 0 15px;
     font-size: 20px;
-    }
+}
 
-    /* Fin Mixin index.html */
 
-@mixin underline-mint{
+
+/* Fin Mixin index.html */
+
+/* Body Alternantes pages */
+
+@mixin menu {
+    width: 100%;
+    background-color: #f6f6f6;
+    margin-top: -100px;
+    border-radius: 30px 30px 0 0;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 80px;
+
+}
+
+@mixin menuname {
+    display: flex;
+    padding-left: 20px;
+    justify-content: space-between;
+
+}
+
+@mixin menunamelike {
+    display: flex;
+    align-items: center;
+    padding-right: 70px;
+    font-size: 30px;
+    height: 50px;
+
+}
+
+@mixin underline-mint {
     content: "";
     display: block;
     padding-top: 0.6rem;
@@ -51,32 +217,55 @@
 @mixin menu__dish {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;   
-    margin-top: 30px; 
+    padding-left: 20px;
+    margin-top: 30px;
 }
 
-@mixin menu__dish--container{
+@mixin menu__dish--container {
     display: flex;
     justify-content: space-between;
     margin: 10px 0 20px 0;
     background-color: white;
     box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20px 20px 20px 20px;
     width: 95%;
     height: 70px;
 }
 
-@mixin menu__dish--text{
+@mixin menu__dish--text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 50px;
     padding: 5px 0 0 10px;
 }
+
 @mixin menu__dish--price {
-    display:flex;
+    display: flex;
     align-items: flex-end;
-    padding-right: 30px;
+    padding-right: 15px;
     padding-bottom: 15px;
+
+}
+
+@mixin menu__dish--animation {
+    background-color: $new-bgcolor;
+    border-radius: 0px 20px 20px 0;
+    width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    visibility: hidden;
     
 }
+
+@mixin menu__dish--opacity {
+    opacity: 100%;
+            width: 10%;
+            visibility: visible;
+}
+
+
+
+/* Fin Body Alternantes pages */

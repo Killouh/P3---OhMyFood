@@ -1,0 +1,31 @@
+@keyframes scale-up-center {
+    0% {
+              transform: scale(0.5);
+    }
+    100% {
+              transform: scale(1);
+    }
+  }
+
+  @keyframes fade {
+    From {
+    opacity : 0;
+    }
+    To {
+    opacity: 1;
+    }
+    }
+
+   @keyframes wiggle {
+        0% { transform: translate(2px, 0px); }
+        20% { transform: translate(-2px, 0px); }
+        40% { transform: translate(2px, 0px); }
+        60% {transform: translate(-2px, 0px); }
+        80% { transform: translate(2px, 0px); }
+        100% { transform: translate(0px, 0px); }
+     }
+
+    @keyframes dishmint {
+        
+        
+    }

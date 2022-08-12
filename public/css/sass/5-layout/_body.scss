@@ -363,6 +363,11 @@
 /* Reponsive Body Main page PC*/
 
 @media screen and (min-width:992px) {
+
+    .command__button,.reservation__button
+    {
+        width: 45%;
+    }
     .functionning__container{
         width: 65%;
         margin: auto;

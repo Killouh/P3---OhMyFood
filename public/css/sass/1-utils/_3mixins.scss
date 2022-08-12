@@ -28,6 +28,7 @@
 @mixin descriptiontext {
     font-weight: 550;
     font-size: 18px;
+    margin: auto;
 }
 
 @mixin functionning-number {
@@ -92,7 +93,7 @@
     font-size: 15px;
     position: absolute;
     top: 30px;
-    left: 510px;
+    left: 75%;
     align-items: center;
 
 }

@@ -115,13 +115,14 @@
 .reservation .reservation__description {
   font-weight: 550;
   font-size: 18px;
+  margin: auto;
   padding-bottom: 30px;
 }
 .reservation .reservation__button {
   border-radius: 30px 30px 30px 30px;
   background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   height: 60px;
-  width: 35%;
+  width: 50%;
   color: white;
   font-size: 20px;
   border: none;
@@ -277,7 +278,7 @@
   font-size: 15px;
   position: absolute;
   top: 30px;
-  left: 510px;
+  left: 75%;
   align-items: center;
 }
 .restaurant .restaurant__cards .restaurant__card .restaurant__picture {
@@ -592,7 +593,7 @@
   border-radius: 30px 30px 30px 30px;
   background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   height: 60px;
-  width: 35%;
+  width: 50%;
   color: white;
   font-size: 20px;
   border: none;
@@ -610,6 +611,9 @@
 /* Fin Body Alternates pages */
 /* Reponsive Body Main page PC*/
 @media screen and (min-width: 992px) {
+  .command__button, .reservation__button {
+    width: 45%;
+  }
   .functionning__container {
     width: 65%;
     margin: auto;

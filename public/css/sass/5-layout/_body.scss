@@ -1,5 +1,56 @@
 /* Body Main page */
 
+/* Spinner */
+
+.loading{
+    background: black;
+    opacity: 0.7;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.20s 3s forwards;
+
+    .loading__ico1 {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255,255,255,.3);
+        border-radius: 50%;
+        border-top-color: $primary-color;
+        animation: spin 1s ease-in-out ;
+        animation-iteration-count: 4;
+        opacity: 1;
+        position: absolute;
+      }
+      .loading__ico2 {
+        width: 75px;
+        height: 75px;
+        border: 3px solid rgba(255,255,255,.3);
+        border-radius: 50%;
+        border-top-color: $primary-color;
+        animation: reversedspin 1s ease-in-out ;
+        animation-iteration-count: 4;
+        opacity: 1;
+      }
+      .loading__ico3 {
+        width: 100px;
+        height: 100px;
+        border: 3px solid rgba(255,255,255,.3);
+        border-radius: 50%;
+        border-top-color: $primary-color;
+        animation: spin 1s ease-in-out ;
+        animation-iteration-count: 4;
+        opacity: 1;
+        position: absolute
+      }
+
+}
+
+
 /* Partie Réservation */
 .reservation {
     @include reservation;
@@ -100,17 +151,20 @@
         @include restaurantcards;
 
 
-        .restaurant__picture {
-            @include restaurantpicture;
-        }
+        
 
-        .restaurand__card {
+        .restaurant__card {
             @include restaurantcard;
+
+           
 
 
             .restaurant__new {
                 @include restaurantnew;
 
+            }
+            .restaurant__picture {
+                @include restaurantpicture;
             }
 
             .restaurant__blank {
@@ -261,7 +315,7 @@
             display: flex;
             color: $new-bgcolor;
             transform: rotate(360deg);
-            transition: 0.4s ease-in-out;
+            transition: 0.28s ease-in-out;
         }
 
         .menu__entries--container:hover .menu__dish--animation {
@@ -269,6 +323,7 @@
         }
         .menu__entries--container:hover #check {
             transform: rotate(0deg);
+            transition: 0.5s ease-in-out;
         }
 
         .menu__dishes--container:hover .menu__dish--animation{
@@ -276,12 +331,14 @@
         }
         .menu__dishes--container:hover #check {
             transform: rotate(0deg);
+            transition: 0.5s ease-in-out;
         }
         .menu__desserts--container:hover .menu__dish--animation{
             @include menu__dish--opacity
         }
         .menu__desserts--container:hover #check {
             transform: rotate(0deg);
+            transition: 0.5s ease-in-out;
         }
 
     }
@@ -302,3 +359,88 @@
 }
 
 /* Fin Body Alternates pages */
+
+/* Reponsive Body Main page PC*/
+
+@media screen and (min-width:992px) {
+    .functionning__container{
+        width: 65%;
+        margin: auto;
+    }
+    .restaurant{
+        align-items: flex-end;
+    .restaurant__cards{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+        .restaurant__card{
+            width: 100%;
+            margin: 0 20px 20px 0;
+            
+            .restaurant__picture{
+                width: 356px;
+            }
+
+            .restaurant__new{
+                left: 250px;
+            }
+            .restaurant__blank{
+                width: 356px;
+            }
+        }
+    }
+}
+ 
+}
+
+/* Fin reponsive Main Body Pc */
+
+/*Responsive Alternate Body PC */
+
+.menu{
+    margin: auto;
+  .menu__name{
+    width: 95%;
+    margin-left: 50px;
+ }
+  .menu__entries,.menu__dishes,.menu__desserts{
+    .menu__entries--title,.menu__desserts--title,.menu__dishes--title{
+        width: 90%;
+        margin: auto;
+        margin-bottom:20px ;
+    }
+    .menu__entries--container,.menu__dishes--container,.menu__desserts--container{
+        width: 90%;
+        margin: auto;
+        margin-bottom:20px ;
+    }
+  }
+  .menu__order{
+    margin: 20px 0 50px 0;
+  }
+}
+
+@media screen and (min-width:1500px) {
+    .widescreen{
+        display: flex;
+        flex-direction: row;
+        background-color: #f6f6f6;
+        .functionning{
+            width: 40%;
+        }
+        .restaurant{
+            width: 60%;
+            .restaurant__cards{
+                width: 100%;
+                .restaurant__card{
+                    width: 100%;
+                    height: 90%;
+                }
+            }
+        }
+    }
+    
+}

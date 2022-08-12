@@ -162,8 +162,7 @@
 
 @mixin restaurantlikeanime_hover {
     color: $primary-color;
-    animation: fade 0.2s ease-in;
-    animation: wiggle 500ms 50% 50%;
+    animation: fade 0.3s ease-in;
 }
 
 

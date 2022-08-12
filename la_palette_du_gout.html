@@ -18,12 +18,12 @@
     <header>
         <div class="header__logolink">
             <a class="header__logoback" rel="logob" href="index.html"><img class="backarrow"
-                    src="/public/images/Misc/arrow.png" alt="Flèche retour" title="arrow"></a>
+                    src="./public/images/Misc/arrow.png" alt="Flèche retour" title="arrow"></a>
             <a class="header__logoconteneur" rel="logol" href="index.html"><img class="logo"
-                    src="public/images/logo/ohmyfood.png" alt="Logo de Ohmyfood" title="Ohmyfood"></a>
+                    src="./public/images/logo/ohmyfood.png" alt="Logo de Ohmyfood" title="Ohmyfood"></a>
         </div>
         <div class="header__restaurant--picture">
-            <img class="header__restpicture" src="/public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            <img class="header__restpicture" src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                 alt="Photo restaurant A la française">
         </div>
     </header>
@@ -33,7 +33,12 @@
             <div class="menu__name--title">
                 <h1>La palette du goût</h1>
             </div>
-            <span class="menu__name--like"><i class="fa-regular fa-heart"></i></i></span>
+            <div class="menu__name--like">
+                <span class="fa-stack">
+                    <i class="fa-regular fa-heart fa-stack-1x"></i>
+                    <i class="fa-solid fa-heart fa-stack-1x"></i>
+                </span>
+            </div>
         </section>
 
         <section class="menu__entries">
@@ -138,7 +143,7 @@
 
         <section class="menu__desserts">
             <div class="menu__desserts--title">
-                <p>PLATS</p>
+                <p>DESSERTS</p>
             </div>
             <div class="menu__desserts--container">
                 <div class="menuinfo">

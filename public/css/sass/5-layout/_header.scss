@@ -4,7 +4,34 @@
 .header__logolink{
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .header__logoconteneur{
+        display: flex;
+        width: 50%;
+        height: 100%;
+        .logo{
+            width: 100%;
+        }
+    }
+    .header__logoback{
+        display: flex;
+        align-items: center;
+        position: relative;
+        right: 10%;
+    
+        .backarrow{
+            height: 50px;
+            width: 50px;
+        }
+      
+    }
 }
+
+
+
+
 
 .headlocation{
     display: flex;
@@ -26,18 +53,9 @@
 /* Header Alternate pages */
 
 
-.header__logoback{
-    display: flex;
-    align-items: center;
-    position: relative;
-    right: 130px;
-  
-}
 
-.backarrow{
-    height: 50px;
-    width: 50px;
-}
+
+
 
 .header__restaurant--picture{
     margin-top: 20px;
@@ -51,4 +69,44 @@
     object-fit: cover; 
     z-index: 1;
 }
+
+@media screen and (min-width:0px) {
+    .header__logolink{
+
+        .header__logoconteneur{
+            width: 60%;
+        }
+}
+}
+
+@media screen and (min-width:600px) {
+    .header__logolink{
+
+        .header__logoconteneur{
+            width: 45%;
+        
+        }
+}
+}
+@media screen and (min-width:1000px) {
+    .header__logolink{
+
+        .header__logoconteneur{
+            width: 30%;
+        
+        }
+}
+}
+
+@media screen and (min-width:1500px) {
+    .header__logolink{
+
+        .header__logoconteneur{
+            width: 20%;
+        
+        }
+}
+}
+
+
 

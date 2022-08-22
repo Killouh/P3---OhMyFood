@@ -13,6 +13,7 @@
 @mixin boldtitle {
     font-weight: bolder;
     font-size: 20px;
+    margin-left: 20px;
 }
 
 @mixin containerstitle {
@@ -28,7 +29,7 @@
 @mixin descriptiontext {
     font-weight: 550;
     font-size: 18px;
-    margin: auto;
+    margin-left: 20px;
 }
 
 @mixin functionning-number {
@@ -93,8 +94,8 @@
     font-size: 15px;
     position: absolute;
     top: 30px;
-    left: 75%;
     align-items: center;
+    right: 10px;
 
 }
 
@@ -192,15 +193,16 @@
 
 @mixin menuname {
     display: flex;
-    padding-left: 20px;
+    padding-left: 0px;
     justify-content: space-between;
+    margin-left: 15px;
 
 }
 
 @mixin menunamelike {
     display: flex;
     align-items: center;
-    padding-right: 70px;
+    padding-right: 25px;
     font-size: 30px;
     height: 50px;
 
@@ -223,7 +225,6 @@
 
 @mixin menu__dish--container {
     display: flex;
-    justify-content: space-between;
     margin: 10px 0 20px 0;
     background-color: white;
     box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
@@ -235,17 +236,18 @@
 @mixin menu__dish--text {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 50px;
     padding: 5px 0 0 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 95%;
 }
 
 @mixin menu__dish--price {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     padding-right: 15px;
-    padding-bottom: 15px;
-
 }
 
 @mixin menu__dish--animation {
@@ -257,7 +259,6 @@
     justify-content: center;
     transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
     visibility: hidden;
-    
 }
 
 @mixin menu__dish--opacity {

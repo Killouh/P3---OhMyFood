@@ -1,8 +1,9 @@
 /* Body Main page */
 
+
 /* Spinner */
 
-.loading{
+.loading {
     background: black;
     opacity: 0.7;
     position: fixed;
@@ -18,35 +19,37 @@
     .loading__ico1 {
         width: 50px;
         height: 50px;
-        border: 3px solid rgba(255,255,255,.3);
+        border: 3px solid rgba(255, 255, 255, .3);
         border-radius: 50%;
         border-top-color: $primary-color;
-        animation: spin 1s ease-in-out ;
+        animation: spin 1s ease-in-out;
         animation-iteration-count: 4;
         opacity: 1;
         position: absolute;
-      }
-      .loading__ico2 {
+    }
+
+    .loading__ico2 {
         width: 75px;
         height: 75px;
-        border: 3px solid rgba(255,255,255,.3);
+        border: 3px solid rgba(255, 255, 255, .3);
         border-radius: 50%;
         border-top-color: $primary-color;
-        animation: reversedspin 1s ease-in-out ;
+        animation: reversedspin 1s ease-in-out;
         animation-iteration-count: 4;
         opacity: 1;
-      }
-      .loading__ico3 {
+    }
+
+    .loading__ico3 {
         width: 100px;
         height: 100px;
-        border: 3px solid rgba(255,255,255,.3);
+        border: 3px solid rgba(255, 255, 255, .3);
         border-radius: 50%;
         border-top-color: $primary-color;
-        animation: spin 1s ease-in-out ;
+        animation: spin 1s ease-in-out;
         animation-iteration-count: 4;
         opacity: 1;
         position: absolute
-      }
+    }
 
 }
 
@@ -151,18 +154,19 @@
         @include restaurantcards;
 
 
-        
+
 
         .restaurant__card {
             @include restaurantcard;
 
-           
+
 
 
             .restaurant__new {
                 @include restaurantnew;
 
             }
+
             .restaurant__picture {
                 @include restaurantpicture;
             }
@@ -258,14 +262,10 @@
 
     }
 
-    .menu__entries,
-    .menu__dishes,
-    .menu__desserts {
+    .menu__dish {
         @include menu__dish;
 
-        .menu__entries--title,
-        .menu__dishes--title,
-        .menu__desserts--title {
+        .menu__dish--title{
             display: flex;
 
             ::after {
@@ -273,30 +273,26 @@
             }
         }
 
-        .menu__entries--container,
-        .menu__dishes--container,
-        .menu__desserts--container {
+        .menu__dish--container {
 
             @include menu__dish--container;
 
-            .menuinfo {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 100%;
 
-                .menu__entries--text,
-                .menu__dishes--text,
-                .menu__desserts--text {
+
+                .menu__dish--text {
                     @include menu__dish--text;
+                    h3,p{
+                        margin-bottom: 10px;
+                    }
                 }
 
-                .menu__entries--price,
-                .menu__dishes--price,
-                .menu__desserts--price {
+                .menu__dish--price{
                     @include menu__dish--price;
+                    .bold{
+                        font-weight: bolder;
+                    }
                 }
-            }
+            
 
             .menu__dish--animation {
                 @include menu__dish--animation;
@@ -305,7 +301,7 @@
 
         }
 
-        #check{
+        #check {
             height: 25px;
             width: 25px;
             background-color: white;
@@ -318,28 +314,18 @@
             transition: 0.28s ease-in-out;
         }
 
-        .menu__entries--container:hover .menu__dish--animation {
+
+
+        .menu__dish--container:hover .menu__dish--animation {
             @include menu__dish--opacity
         }
-        .menu__entries--container:hover #check {
+
+        .menu__dish--container:hover #check {
             transform: rotate(0deg);
             transition: 0.5s ease-in-out;
         }
 
-        .menu__dishes--container:hover .menu__dish--animation{
-            @include menu__dish--opacity
-        }
-        .menu__dishes--container:hover #check {
-            transform: rotate(0deg);
-            transition: 0.5s ease-in-out;
-        }
-        .menu__desserts--container:hover .menu__dish--animation{
-            @include menu__dish--opacity
-        }
-        .menu__desserts--container:hover #check {
-            transform: rotate(0deg);
-            transition: 0.5s ease-in-out;
-        }
+
 
     }
 
@@ -360,92 +346,157 @@
 
 /* Fin Body Alternates pages */
 
+/* CSS Small screen */
+@media screen and (max-width:500px) {
+    .reservation {
+        .reservation__button {
+            width: 80%;
+        }
+
+    }
+
+   
+}
+
 /* Reponsive Body Main page PC*/
 
 @media screen and (min-width:992px) {
 
-    .command__button,.reservation__button
-    {
-        width: 45%;
-    }
-    .functionning__container{
-        width: 65%;
-        margin: auto;
-    }
-    .restaurant{
-        align-items: flex-end;
-    .restaurant__cards{
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: auto;
-        .restaurant__card{
-            width: 100%;
-            margin: 0 20px 20px 0;
-            
-            .restaurant__picture{
-                width: 356px;
-            }
-
-            .restaurant__new{
-                left: 250px;
-            }
-            .restaurant__blank{
-                width: 356px;
+    .menu {
+        .menu__order {
+            .command__button {
+                width: 35%;
             }
         }
     }
-}
- 
+
+
+    .reservation {
+
+        .reservation__button {
+            width: 35%;
+        }
+    }
+
+    .functionning__container {
+        width: 65%;
+        margin: auto;
+    }
+
+    .restaurant {
+        align-items: flex-end;
+
+        .restaurant__cards {
+            display: flex;
+            width: 70%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+
+            .cardlink {
+                display: flex;
+                width: calc(40% - 20px);
+                margin: 0 20px 0 0;
+                .restaurant__card {
+                    width: 100%;
+                    
+
+                    .restaurant__picture {
+                        display: flex;
+                    }
+
+                    
+
+                    .restaurant__blank {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 /* Fin reponsive Main Body Pc */
 
 /*Responsive Alternate Body PC */
+@media screen and (min-width:992px) {
+.menu {
 
-.menu{
-    margin: auto;
-  .menu__name{
-    width: 95%;
-    margin-left: 50px;
- }
-  .menu__entries,.menu__dishes,.menu__desserts{
-    .menu__entries--title,.menu__desserts--title,.menu__dishes--title{
-        width: 90%;
-        margin: auto;
-        margin-bottom:20px ;
+    .menu__name {
+        width: 95%;
+        margin-left: 20px;
     }
-    .menu__entries--container,.menu__dishes--container,.menu__desserts--container{
-        width: 90%;
-        margin: auto;
-        margin-bottom:20px ;
+
+    .menu__dish{
+
+        .menu__dish--title {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        .menu__dish--container {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
     }
-  }
-  .menu__order{
-    margin: 20px 0 50px 0;
-  }
+
+    .menu__order {
+        margin: 20px 0 50px 0;
+    }
+}
 }
 
 @media screen and (min-width:1500px) {
-    .widescreen{
+    .widescreen {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         background-color: #f6f6f6;
-        .functionning{
-            width: 40%;
-        }
-        .restaurant{
-            width: 60%;
-            .restaurant__cards{
-                width: 100%;
-                .restaurant__card{
+
+        .functionning {
+            width: 100%;
+            .functionning__container{
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 85%;
+                .functionning__title{
                     width: 100%;
-                    height: 90%;
+                    justify-content: center;
+                }
+                .functionning__choose{
+                    width: 30%;
+                    margin: 0 20px;
+                }
+                .functionning__menu{
+                    width: 30%;
+                    margin: 0 20px;
+                }
+                .functionning__taste{
+                    width: 30%;
+                    margin: 0 20px;
                 }
             }
         }
+
+        .restaurant {
+            width: 100%;
+            margin-top: 65px;
+            .restaurant__title{
+                justify-content: center;
+                width: 100%;
+            }
+
+            .restaurant__cards {
+                width: 100%;
+                .cardlink{
+                    width: 20%;
+              
+            }
+            }
+        }
     }
-    
+
 }

@@ -7,6 +7,27 @@
 .header__logolink {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.header__logolink .header__logoconteneur {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+.header__logolink .header__logoconteneur .logo {
+  width: 100%;
+}
+.header__logolink .header__logoback {
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 10%;
+}
+.header__logolink .header__logoback .backarrow {
+  height: 50px;
+  width: 50px;
 }
 
 .headlocation {
@@ -26,18 +47,6 @@
 
 /* Fin Header Main Page */
 /* Header Alternate pages */
-.header__logoback {
-  display: flex;
-  align-items: center;
-  position: relative;
-  right: 130px;
-}
-
-.backarrow {
-  height: 50px;
-  width: 50px;
-}
-
 .header__restaurant--picture {
   margin-top: 20px;
   height: 350px;
@@ -50,6 +59,26 @@
   z-index: 1;
 }
 
+@media screen and (min-width: 0px) {
+  .header__logolink .header__logoconteneur {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .header__logolink .header__logoconteneur {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header__logolink .header__logoconteneur {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .header__logolink .header__logoconteneur {
+    width: 20%;
+  }
+}
 /* Body Main page */
 /* Spinner */
 .loading {
@@ -110,12 +139,13 @@
 .reservation .reservation__title {
   font-weight: bolder;
   font-size: 20px;
+  margin-left: 20px;
   padding-bottom: 30px;
 }
 .reservation .reservation__description {
   font-weight: 550;
   font-size: 18px;
-  margin: auto;
+  margin-left: 20px;
   padding-bottom: 30px;
 }
 .reservation .reservation__button {
@@ -278,8 +308,8 @@
   font-size: 15px;
   position: absolute;
   top: 30px;
-  left: 75%;
   align-items: center;
+  right: 10px;
 }
 .restaurant .restaurant__cards .restaurant__card .restaurant__picture {
   height: 250px;
@@ -352,13 +382,14 @@
 }
 .menu .menu__name {
   display: flex;
-  padding-left: 20px;
+  padding-left: 0px;
   justify-content: space-between;
+  margin-left: 15px;
 }
 .menu .menu__name .menu__name--like {
   display: flex;
   align-items: center;
-  padding-right: 70px;
+  padding-right: 25px;
   font-size: 30px;
   height: 50px;
 }
@@ -383,51 +414,24 @@
   color: #9356DC;
   animation: fade 0.3s ease-in;
 }
-.menu .menu__entries,
-.menu .menu__dishes,
-.menu .menu__desserts {
+.menu .menu__dish {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
   margin-top: 30px;
 }
-.menu .menu__entries .menu__entries--title,
-.menu .menu__entries .menu__dishes--title,
-.menu .menu__entries .menu__desserts--title,
-.menu .menu__dishes .menu__entries--title,
-.menu .menu__dishes .menu__dishes--title,
-.menu .menu__dishes .menu__desserts--title,
-.menu .menu__desserts .menu__entries--title,
-.menu .menu__desserts .menu__dishes--title,
-.menu .menu__desserts .menu__desserts--title {
+.menu .menu__dish .menu__dish--title {
   display: flex;
 }
-.menu .menu__entries .menu__entries--title ::after,
-.menu .menu__entries .menu__dishes--title ::after,
-.menu .menu__entries .menu__desserts--title ::after,
-.menu .menu__dishes .menu__entries--title ::after,
-.menu .menu__dishes .menu__dishes--title ::after,
-.menu .menu__dishes .menu__desserts--title ::after,
-.menu .menu__desserts .menu__entries--title ::after,
-.menu .menu__desserts .menu__dishes--title ::after,
-.menu .menu__desserts .menu__desserts--title ::after {
+.menu .menu__dish .menu__dish--title ::after {
   content: "";
   display: block;
   padding-top: 0.6rem;
   width: 60%;
   border-bottom: 3px solid #99e2d0;
 }
-.menu .menu__entries .menu__entries--container,
-.menu .menu__entries .menu__dishes--container,
-.menu .menu__entries .menu__desserts--container,
-.menu .menu__dishes .menu__entries--container,
-.menu .menu__dishes .menu__dishes--container,
-.menu .menu__dishes .menu__desserts--container,
-.menu .menu__desserts .menu__entries--container,
-.menu .menu__desserts .menu__dishes--container,
-.menu .menu__desserts .menu__desserts--container {
+.menu .menu__dish .menu__dish--container {
   display: flex;
-  justify-content: space-between;
   margin: 10px 0 20px 0;
   background-color: white;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
@@ -435,94 +439,28 @@
   width: 95%;
   height: 70px;
 }
-.menu .menu__entries .menu__entries--container .menuinfo,
-.menu .menu__entries .menu__dishes--container .menuinfo,
-.menu .menu__entries .menu__desserts--container .menuinfo,
-.menu .menu__dishes .menu__entries--container .menuinfo,
-.menu .menu__dishes .menu__dishes--container .menuinfo,
-.menu .menu__dishes .menu__desserts--container .menuinfo,
-.menu .menu__desserts .menu__entries--container .menuinfo,
-.menu .menu__desserts .menu__dishes--container .menuinfo,
-.menu .menu__desserts .menu__desserts--container .menuinfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-.menu .menu__entries .menu__entries--container .menuinfo .menu__entries--text,
-.menu .menu__entries .menu__entries--container .menuinfo .menu__dishes--text,
-.menu .menu__entries .menu__entries--container .menuinfo .menu__desserts--text,
-.menu .menu__entries .menu__dishes--container .menuinfo .menu__entries--text,
-.menu .menu__entries .menu__dishes--container .menuinfo .menu__dishes--text,
-.menu .menu__entries .menu__dishes--container .menuinfo .menu__desserts--text,
-.menu .menu__entries .menu__desserts--container .menuinfo .menu__entries--text,
-.menu .menu__entries .menu__desserts--container .menuinfo .menu__dishes--text,
-.menu .menu__entries .menu__desserts--container .menuinfo .menu__desserts--text,
-.menu .menu__dishes .menu__entries--container .menuinfo .menu__entries--text,
-.menu .menu__dishes .menu__entries--container .menuinfo .menu__dishes--text,
-.menu .menu__dishes .menu__entries--container .menuinfo .menu__desserts--text,
-.menu .menu__dishes .menu__dishes--container .menuinfo .menu__entries--text,
-.menu .menu__dishes .menu__dishes--container .menuinfo .menu__dishes--text,
-.menu .menu__dishes .menu__dishes--container .menuinfo .menu__desserts--text,
-.menu .menu__dishes .menu__desserts--container .menuinfo .menu__entries--text,
-.menu .menu__dishes .menu__desserts--container .menuinfo .menu__dishes--text,
-.menu .menu__dishes .menu__desserts--container .menuinfo .menu__desserts--text,
-.menu .menu__desserts .menu__entries--container .menuinfo .menu__entries--text,
-.menu .menu__desserts .menu__entries--container .menuinfo .menu__dishes--text,
-.menu .menu__desserts .menu__entries--container .menuinfo .menu__desserts--text,
-.menu .menu__desserts .menu__dishes--container .menuinfo .menu__entries--text,
-.menu .menu__desserts .menu__dishes--container .menuinfo .menu__dishes--text,
-.menu .menu__desserts .menu__dishes--container .menuinfo .menu__desserts--text,
-.menu .menu__desserts .menu__desserts--container .menuinfo .menu__entries--text,
-.menu .menu__desserts .menu__desserts--container .menuinfo .menu__dishes--text,
-.menu .menu__desserts .menu__desserts--container .menuinfo .menu__desserts--text {
+.menu .menu__dish .menu__dish--container .menu__dish--text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 50px;
   padding: 5px 0 0 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 95%;
 }
-.menu .menu__entries .menu__entries--container .menuinfo .menu__entries--price,
-.menu .menu__entries .menu__entries--container .menuinfo .menu__dishes--price,
-.menu .menu__entries .menu__entries--container .menuinfo .menu__desserts--price,
-.menu .menu__entries .menu__dishes--container .menuinfo .menu__entries--price,
-.menu .menu__entries .menu__dishes--container .menuinfo .menu__dishes--price,
-.menu .menu__entries .menu__dishes--container .menuinfo .menu__desserts--price,
-.menu .menu__entries .menu__desserts--container .menuinfo .menu__entries--price,
-.menu .menu__entries .menu__desserts--container .menuinfo .menu__dishes--price,
-.menu .menu__entries .menu__desserts--container .menuinfo .menu__desserts--price,
-.menu .menu__dishes .menu__entries--container .menuinfo .menu__entries--price,
-.menu .menu__dishes .menu__entries--container .menuinfo .menu__dishes--price,
-.menu .menu__dishes .menu__entries--container .menuinfo .menu__desserts--price,
-.menu .menu__dishes .menu__dishes--container .menuinfo .menu__entries--price,
-.menu .menu__dishes .menu__dishes--container .menuinfo .menu__dishes--price,
-.menu .menu__dishes .menu__dishes--container .menuinfo .menu__desserts--price,
-.menu .menu__dishes .menu__desserts--container .menuinfo .menu__entries--price,
-.menu .menu__dishes .menu__desserts--container .menuinfo .menu__dishes--price,
-.menu .menu__dishes .menu__desserts--container .menuinfo .menu__desserts--price,
-.menu .menu__desserts .menu__entries--container .menuinfo .menu__entries--price,
-.menu .menu__desserts .menu__entries--container .menuinfo .menu__dishes--price,
-.menu .menu__desserts .menu__entries--container .menuinfo .menu__desserts--price,
-.menu .menu__desserts .menu__dishes--container .menuinfo .menu__entries--price,
-.menu .menu__desserts .menu__dishes--container .menuinfo .menu__dishes--price,
-.menu .menu__desserts .menu__dishes--container .menuinfo .menu__desserts--price,
-.menu .menu__desserts .menu__desserts--container .menuinfo .menu__entries--price,
-.menu .menu__desserts .menu__desserts--container .menuinfo .menu__dishes--price,
-.menu .menu__desserts .menu__desserts--container .menuinfo .menu__desserts--price {
+.menu .menu__dish .menu__dish--container .menu__dish--text h3, .menu .menu__dish .menu__dish--container .menu__dish--text p {
+  margin-bottom: 10px;
+}
+.menu .menu__dish .menu__dish--container .menu__dish--price {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding-right: 15px;
-  padding-bottom: 15px;
 }
-.menu .menu__entries .menu__entries--container .menu__dish--animation,
-.menu .menu__entries .menu__dishes--container .menu__dish--animation,
-.menu .menu__entries .menu__desserts--container .menu__dish--animation,
-.menu .menu__dishes .menu__entries--container .menu__dish--animation,
-.menu .menu__dishes .menu__dishes--container .menu__dish--animation,
-.menu .menu__dishes .menu__desserts--container .menu__dish--animation,
-.menu .menu__desserts .menu__entries--container .menu__dish--animation,
-.menu .menu__desserts .menu__dishes--container .menu__dish--animation,
-.menu .menu__desserts .menu__desserts--container .menu__dish--animation {
+.menu .menu__dish .menu__dish--container .menu__dish--price .bold {
+  font-weight: bolder;
+}
+.menu .menu__dish .menu__dish--container .menu__dish--animation {
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0;
   width: 0;
@@ -532,9 +470,7 @@
   transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
   visibility: hidden;
 }
-.menu .menu__entries #check,
-.menu .menu__dishes #check,
-.menu .menu__desserts #check {
+.menu .menu__dish #check {
   height: 25px;
   width: 25px;
   background-color: white;
@@ -546,42 +482,12 @@
   transform: rotate(360deg);
   transition: 0.28s ease-in-out;
 }
-.menu .menu__entries .menu__entries--container:hover .menu__dish--animation,
-.menu .menu__dishes .menu__entries--container:hover .menu__dish--animation,
-.menu .menu__desserts .menu__entries--container:hover .menu__dish--animation {
+.menu .menu__dish .menu__dish--container:hover .menu__dish--animation {
   opacity: 100%;
   width: 10%;
   visibility: visible;
 }
-.menu .menu__entries .menu__entries--container:hover #check,
-.menu .menu__dishes .menu__entries--container:hover #check,
-.menu .menu__desserts .menu__entries--container:hover #check {
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-}
-.menu .menu__entries .menu__dishes--container:hover .menu__dish--animation,
-.menu .menu__dishes .menu__dishes--container:hover .menu__dish--animation,
-.menu .menu__desserts .menu__dishes--container:hover .menu__dish--animation {
-  opacity: 100%;
-  width: 10%;
-  visibility: visible;
-}
-.menu .menu__entries .menu__dishes--container:hover #check,
-.menu .menu__dishes .menu__dishes--container:hover #check,
-.menu .menu__desserts .menu__dishes--container:hover #check {
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-}
-.menu .menu__entries .menu__desserts--container:hover .menu__dish--animation,
-.menu .menu__dishes .menu__desserts--container:hover .menu__dish--animation,
-.menu .menu__desserts .menu__desserts--container:hover .menu__dish--animation {
-  opacity: 100%;
-  width: 10%;
-  visibility: visible;
-}
-.menu .menu__entries .menu__desserts--container:hover #check,
-.menu .menu__dishes .menu__desserts--container:hover #check,
-.menu .menu__desserts .menu__desserts--container:hover #check {
+.menu .menu__dish .menu__dish--container:hover #check {
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
 }
@@ -609,10 +515,19 @@
 }
 
 /* Fin Body Alternates pages */
+/* CSS Small screen */
+@media screen and (max-width: 500px) {
+  .reservation .reservation__button {
+    width: 80%;
+  }
+}
 /* Reponsive Body Main page PC*/
 @media screen and (min-width: 992px) {
-  .command__button, .reservation__button {
-    width: 45%;
+  .menu .menu__order .command__button {
+    width: 35%;
+  }
+  .reservation .reservation__button {
+    width: 35%;
   }
   .functionning__container {
     width: 65%;
@@ -623,67 +538,91 @@
   }
   .restaurant .restaurant__cards {
     display: flex;
-    width: 100%;
+    width: 70%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
   }
-  .restaurant .restaurant__cards .restaurant__card {
+  .restaurant .restaurant__cards .cardlink {
+    display: flex;
+    width: calc(40% - 20px);
+    margin: 0 20px 0 0;
+  }
+  .restaurant .restaurant__cards .cardlink .restaurant__card {
     width: 100%;
-    margin: 0 20px 20px 0;
   }
-  .restaurant .restaurant__cards .restaurant__card .restaurant__picture {
-    width: 356px;
+  .restaurant .restaurant__cards .cardlink .restaurant__card .restaurant__picture {
+    display: flex;
   }
-  .restaurant .restaurant__cards .restaurant__card .restaurant__new {
-    left: 250px;
-  }
-  .restaurant .restaurant__cards .restaurant__card .restaurant__blank {
-    width: 356px;
+  .restaurant .restaurant__cards .cardlink .restaurant__card .restaurant__blank {
+    width: 100%;
   }
 }
 /* Fin reponsive Main Body Pc */
 /*Responsive Alternate Body PC */
-.menu {
-  margin: auto;
+@media screen and (min-width: 992px) {
+  .menu .menu__name {
+    width: 95%;
+    margin-left: 20px;
+  }
+  .menu .menu__dish .menu__dish--title {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .menu .menu__dish .menu__dish--container {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .menu .menu__order {
+    margin: 20px 0 50px 0;
+  }
 }
-.menu .menu__name {
-  width: 95%;
-  margin-left: 50px;
-}
-.menu .menu__entries .menu__entries--title, .menu .menu__entries .menu__desserts--title, .menu .menu__entries .menu__dishes--title, .menu .menu__dishes .menu__entries--title, .menu .menu__dishes .menu__desserts--title, .menu .menu__dishes .menu__dishes--title, .menu .menu__desserts .menu__entries--title, .menu .menu__desserts .menu__desserts--title, .menu .menu__desserts .menu__dishes--title {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 20px;
-}
-.menu .menu__entries .menu__entries--container, .menu .menu__entries .menu__dishes--container, .menu .menu__entries .menu__desserts--container, .menu .menu__dishes .menu__entries--container, .menu .menu__dishes .menu__dishes--container, .menu .menu__dishes .menu__desserts--container, .menu .menu__desserts .menu__entries--container, .menu .menu__desserts .menu__dishes--container, .menu .menu__desserts .menu__desserts--container {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 20px;
-}
-.menu .menu__order {
-  margin: 20px 0 50px 0;
-}
-
 @media screen and (min-width: 1500px) {
   .widescreen {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #f6f6f6;
   }
   .widescreen .functionning {
-    width: 40%;
+    width: 100%;
+  }
+  .widescreen .functionning .functionning__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85%;
+  }
+  .widescreen .functionning .functionning__container .functionning__title {
+    width: 100%;
+    justify-content: center;
+  }
+  .widescreen .functionning .functionning__container .functionning__choose {
+    width: 30%;
+    margin: 0 20px;
+  }
+  .widescreen .functionning .functionning__container .functionning__menu {
+    width: 30%;
+    margin: 0 20px;
+  }
+  .widescreen .functionning .functionning__container .functionning__taste {
+    width: 30%;
+    margin: 0 20px;
   }
   .widescreen .restaurant {
-    width: 60%;
+    width: 100%;
+    margin-top: 65px;
+  }
+  .widescreen .restaurant .restaurant__title {
+    justify-content: center;
+    width: 100%;
   }
   .widescreen .restaurant .restaurant__cards {
     width: 100%;
   }
-  .widescreen .restaurant .restaurant__cards .restaurant__card {
-    width: 100%;
-    height: 90%;
+  .widescreen .restaurant .restaurant__cards .cardlink {
+    width: 20%;
   }
 }
 .footer {
@@ -699,6 +638,8 @@
 .footer .footer__link {
   padding: 0;
   padding-left: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .footer .footer__link .footer__ico {
   padding-right: 10px;
@@ -804,6 +745,10 @@ li {
 a {
   text-decoration: none;
   color: black;
+}
+
+span {
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -419,6 +419,8 @@
   flex-direction: column;
   padding-left: 20px;
   margin-top: 30px;
+  max-width: 1650px;
+  margin: auto;
 }
 .menu .menu__dish .menu__dish--title {
   display: flex;
@@ -470,7 +472,7 @@
   transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
   visibility: hidden;
 }
-.menu .menu__dish #check {
+.menu .menu__dish .check {
   height: 25px;
   width: 25px;
   background-color: white;
@@ -480,16 +482,16 @@
   display: flex;
   color: #99e2d0;
   transform: rotate(360deg);
-  transition: 0.28s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 .menu .menu__dish .menu__dish--container:hover .menu__dish--animation {
   opacity: 100%;
   width: 10%;
   visibility: visible;
 }
-.menu .menu__dish .menu__dish--container:hover #check {
+.menu .menu__dish .menu__dish--container:hover .check {
   transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 .menu .menu__order {
   display: flex;
@@ -563,8 +565,11 @@
 /*Responsive Alternate Body PC */
 @media screen and (min-width: 992px) {
   .menu .menu__name {
-    width: 95%;
-    margin-left: 20px;
+    width: 92%;
+    margin: 0 10% 0 5%;
+  }
+  .menu .menu__name .menu__name--like {
+    padding-left: 10px;
   }
   .menu .menu__dish .menu__dish--title {
     width: 90%;
@@ -625,6 +630,15 @@
     width: 20%;
   }
 }
+@media screen and (min-width: 1700px) {
+  .menu .menu__name {
+    width: 87%;
+    margin: 0 10% 0 5%;
+  }
+  .menu .menu__name .menu__name--like {
+    padding-left: 10px;
+  }
+}
 .footer {
   background-color: #353535;
   padding: 10px 0 0 0px;
@@ -651,7 +665,7 @@
 }
 
 /* Reponsive Footer */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 940px) {
   .footer .footer__title {
     margin: 0 0 35px 80px;
   }
@@ -708,13 +722,14 @@ h2, h3, h4 {
   font-family: "Roboto", sans-serif;
 }
 
-p {
+* {
   font-family: "Roboto", sans-serif;
   margin: 0 0 0 0;
 }
 
 h1 {
   font-family: "Shrikhand", sans-serif;
+  font-size: 1.6em;
 }
 
 h3 {

@@ -301,7 +301,7 @@
 
         }
 
-        #check {
+        .check {
             height: 25px;
             width: 25px;
             background-color: white;
@@ -311,7 +311,7 @@
             display: flex;
             color: $new-bgcolor;
             transform: rotate(360deg);
-            transition: 0.28s ease-in-out;
+            transition: 0.25s ease-in-out;
         }
 
 
@@ -320,9 +320,9 @@
             @include menu__dish--opacity
         }
 
-        .menu__dish--container:hover #check {
+        .menu__dish--container:hover .check {
             transform: rotate(0deg);
-            transition: 0.5s ease-in-out;
+            transition: 0.4s ease-in-out;
         }
 
 
@@ -425,8 +425,11 @@
 .menu {
 
     .menu__name {
-        width: 95%;
-        margin-left: 20px;
+        width: 92%;
+        margin: 0 10% 0 5%;
+        .menu__name--like{
+            padding-left: 10px;
+        }
     }
 
     .menu__dish{
@@ -497,6 +500,21 @@
             }
             }
         }
+    }
+
+}
+
+@media screen and (min-width:1700px) {
+    .menu {
+    
+        .menu__name {
+            width: 87%;
+            margin: 0 10% 0 5%;
+            .menu__name--like{
+                padding-left: 10px;
+            }
+        }
+
     }
 
 }

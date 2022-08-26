@@ -91,6 +91,7 @@
 
     .functionning__title {
         @include containerstitle;
+        margin-bottom: 15px;
     }
 
     .functionning__container {
@@ -265,7 +266,7 @@
     .menu__dish {
         @include menu__dish;
 
-        .menu__dish--title{
+        .menu__dish--title {
             display: flex;
 
             ::after {
@@ -273,33 +274,55 @@
             }
         }
 
+
+
         .menu__dish--container {
 
             @include menu__dish--container;
+            animation: menu_fade 400ms cubic-bezier(0.12, 0.74, 0.3, 1) both;
+            &:nth-child(2){
+                animation-delay: 100ms;
+            }
+            &:nth-child(3){
+                animation-delay: 210ms;
+            }
+            &:nth-child(4){
+                animation-delay: 220ms;
+            }
+            &:nth-child(5){
+                animation-delay: 230ms;
+            }
 
 
+            .menu__dish--text {
+                @include menu__dish--text;
 
-                .menu__dish--text {
-                    @include menu__dish--text;
-                    h3,p{
-                        margin-bottom: 10px;
-                    }
+                h3,
+                p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: 10px;
                 }
+            }
 
-                .menu__dish--price{
-                    @include menu__dish--price;
-                    .bold{
-                        font-weight: bolder;
-                    }
+            .menu__dish--price {
+                @include menu__dish--price;
+
+                .bold {
+                    font-weight: bolder;
                 }
-            
+            }
+
 
             .menu__dish--animation {
                 @include menu__dish--animation;
 
             }
-
         }
+
+     
+
 
         .check {
             height: 25px;
@@ -355,7 +378,7 @@
 
     }
 
-   
+
 }
 
 /* Reponsive Body Main page PC*/
@@ -398,15 +421,16 @@
                 display: flex;
                 width: calc(40% - 20px);
                 margin: 0 20px 0 0;
+
                 .restaurant__card {
                     width: 100%;
-                    
+
 
                     .restaurant__picture {
                         display: flex;
                     }
 
-                    
+
 
                     .restaurant__blank {
                         width: 100%;
@@ -422,35 +446,36 @@
 
 /*Responsive Alternate Body PC */
 @media screen and (min-width:992px) {
-.menu {
+    .menu {
 
-    .menu__name {
-        width: 92%;
-        margin: 0 10% 0 5%;
-        .menu__name--like{
-            padding-left: 10px;
-        }
-    }
+        .menu__name {
+            width: 92%;
+            margin: 0 10% 0 5%;
 
-    .menu__dish{
-
-        .menu__dish--title {
-            width: 90%;
-            margin: auto;
-            margin-bottom: 20px;
+            .menu__name--like {
+                padding-left: 10px;
+            }
         }
 
-        .menu__dish--container {
-            width: 90%;
-            margin: auto;
-            margin-bottom: 20px;
+        .menu__dish {
+
+            .menu__dish--title {
+                width: 90%;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+
+            .menu__dish--container {
+                width: 90%;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+        }
+
+        .menu__order {
+            margin: 20px 0 50px 0;
         }
     }
-
-    .menu__order {
-        margin: 20px 0 50px 0;
-    }
-}
 }
 
 @media screen and (min-width:1500px) {
@@ -461,23 +486,28 @@
 
         .functionning {
             width: 100%;
-            .functionning__container{
+
+            .functionning__container {
                 flex-direction: row;
                 flex-wrap: wrap;
                 width: 85%;
-                .functionning__title{
+
+                .functionning__title {
                     width: 100%;
                     justify-content: center;
                 }
-                .functionning__choose{
+
+                .functionning__choose {
                     width: 30%;
                     margin: 0 20px;
                 }
-                .functionning__menu{
+
+                .functionning__menu {
                     width: 30%;
                     margin: 0 20px;
                 }
-                .functionning__taste{
+
+                .functionning__taste {
                     width: 30%;
                     margin: 0 20px;
                 }
@@ -487,17 +517,19 @@
         .restaurant {
             width: 100%;
             margin-top: 65px;
-            .restaurant__title{
+
+            .restaurant__title {
                 justify-content: center;
                 width: 100%;
             }
 
             .restaurant__cards {
                 width: 100%;
-                .cardlink{
+
+                .cardlink {
                     width: 20%;
-              
-            }
+
+                }
             }
         }
     }
@@ -506,11 +538,12 @@
 
 @media screen and (min-width:1700px) {
     .menu {
-    
+
         .menu__name {
             width: 87%;
             margin: 0 10% 0 5%;
-            .menu__name--like{
+
+            .menu__name--like {
                 padding-left: 10px;
             }
         }
